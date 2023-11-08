@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/watchlist.js", "pages/index.js"  ],
+, "pages/watchlist.js", "pages/index.js", "pages/_app.js"  ],
   "exclude": [
     "node_modules"
   ]
