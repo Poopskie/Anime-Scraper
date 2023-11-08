@@ -9,7 +9,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>my cheeks hurt</title>
-        <link rel='icon' href='/favicon.ico'/>
+        <link rel='icon' href='/sfavicon.png' type='image/x-icon'/>
       </Head>
 
       <main>

@@ -1,6 +1,7 @@
 import utilStyles from '../styles/utils.module.css';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 
 import ReactDOM from 'react-dom/client';
 import { useState } from 'react';
@@ -19,6 +20,7 @@ export default function Anime(){
                 <title>
                     Anime yay!!!
                 </title>
+                <link rel='icon' href='/favicon.png' type='image/x-icon'/>
             </Head>
 
             <div style={{padding:50}}>
@@ -28,6 +30,10 @@ export default function Anime(){
             </div>
 
             <div className={utilStyles.card}>
+                <Image 
+                    src='/oregairu.png'
+                    width={200} height={200}
+                    alt='oregairu'/>
                 <form style={{display:'flex', flexDirection:'column', }}>
                     <h2>input anime name</h2>
                         <input
@@ -36,7 +42,7 @@ export default function Anime(){
                             onChange={(e) => setName(e.target.value)}
                         />
                         <p/>
-                    <input type='submit'value='add to watchlist'/>
+                    <input type='submit' value='add to watchlist'/>
                 </form>
             </div>
 
