@@ -10,7 +10,7 @@ export const siteTitle = 'ouyoyoyoy';
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
-      <Head>
+       <Head>
         <title>{siteTitle}</title>
       </Head>
       <header className={styles.header}>

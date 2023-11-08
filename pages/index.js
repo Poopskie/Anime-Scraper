@@ -9,6 +9,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>my cheeks hurt</title>
+        <link rel='icon' href='/favicon.ico'/>
       </Head>
 
       <main>
@@ -30,10 +31,10 @@ export default function Home() {
             <p>Find the most watched weekly Anime</p>
           </Link>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
+          <Link href='/movies' className={styles.card}>
             <h3>Movies</h3>
             <p>Find the most watched weekly Movies</p>
-          </a>
+          </Link>
 
         </div>
       </main>
