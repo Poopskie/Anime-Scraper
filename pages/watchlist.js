@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Head from 'next/head';
 import utilStyles from '../styles/utils.module.css';
-import Template from '../components/layout'
+import Template from '../components/template.js'
 
 export default function WatchList() {
     return (
