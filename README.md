@@ -1,6 +1,6 @@
 # Anime Scraper
  NextJS Webapp with React to scrape popular anime and store them in a watchlist (PostgreSQL)
-
- Languages: Javascript, CSS, Typescript
- Libraries: React, nodeJS, 
+<br/><br/>
+ Languages: Javascript, CSS, Typescript <br/>
+ Libraries: React, nodeJS <br/>
  Framework: Nextjs
