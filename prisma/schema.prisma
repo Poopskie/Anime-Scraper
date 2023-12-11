@@ -5,31 +5,28 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
 model anime {
-  id           String     @default(cuid()) @id
-  name         String
-  description  String?
-  date_added   Date 
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  date_added  DateTime @default(now()) @map(name: "date_added")
+  image_url   String
+  User        User?    @relation(fields: [userId], references: [id])
+  userId      String?
 }
 
-id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
-          name VARCHAR(255) NOT NULL UNIQUE,
-          year INT(255) NOT NULL,
-          description TEXT NOT NULL,
-          date_added DATE NOT NULL,
-          image_url VARCHAR(255) NOT NULL
-
 model User {
-  id            String       @default(cuid()) @id
-  name          String?
-  email         String?   @unique
-  createdAt     DateTime  @default(now()) @map(name: "created_at")
-  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
-  watchlist     anime[]
+  id        String   @id @default(cuid())
+  name      String?
+  email     String?  @unique
+  createdAt DateTime @default(now()) @map(name: "created_at")
+  updatedAt DateTime @updatedAt @map(name: "updated_at")
+  watchlist anime[]
+
   @@map(name: "users")
 }
